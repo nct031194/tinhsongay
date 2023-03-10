@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kiem Tra So Ngay Trong Thang</h1>
+    <input type="number" id="month" size="15"> <button type="button" onclick="check()">Check</button>
+    <br>
+    <p id="result"></p>
+    <script>
+        function check(){
+            let monthValue = document.getElementById('month').value;
+            if ( monthValue == 1 || monthValue == 3 || monthValue == 5 || monthValue == 7 || monthValue == 8 || monthValue == 10 || monthValue == 12){
+                document.getElementById('result').innerHTML="Thang" + monthValue + " co 31 ngay ";
+            }
+            else if (monthValue == 4 || monthValue == 6 || monthValue == 9 || monthValue == 11){
+                document.getElementById('result').innerHTML="Thang" + monthValue + " co 30 ngay";
+            }
+            else if (monthValue == 2){
+                document.getElementById('result').innerHTML="Thang 2 co 28 hoac 29 ngay";
+            }
+            else {
+                document.getElementById('result').innerHTML="Vui long nhap lai thang"
+            }
+        }
+    </script>
+</body>
+</html>
